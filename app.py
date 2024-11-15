@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import requests, spacy, json
+import requests, spacy
 
 app = Flask(__name__)
 
@@ -12,25 +12,25 @@ def home():
  
 @app.route("/get", methods=['POST', 'GET'])
 def get_joke():
-    user = request.get_json()
-    user = user.get("data")
-    response = chatbot(user)
+    doc = request.get_json()
+    doc = doc.get("data")
+    response = chatbot(doc)
     return response
  
 def fetch_joke():
     response = requests.get("https://icanhazdadjoke.com/", headers={"Accept": "application/json"})
     # the accept header gets it to return a json response
-    joke = response.json().get("joke")
-    return joke
+    response = response.json().get("joke")
+    return response
 
-def chatbot(user):
+def chatbot(doc):
     joke = nlp("dad joke")
-    user = nlp(user)
-    min_similarity = 0.75
-    if joke.similarity(user) >= min_similarity:
+    doc = nlp(doc)
+    min_similarity = 0.5
+    if joke.similarity(doc) >= min_similarity:
         return fetch_joke()
     else:
-        response = "try asking for a dad joke"
+        response = "try asking for a dad joke!"
         return response
 
 
