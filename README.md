@@ -42,5 +42,5 @@ run `deactivate` in the terminal to leave virtual environment
 [intro to python virtual environments - freeCodeCamp](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)  
 [beginners guide to creating a web application with flask - Medium](https://medium.com/@dattu1993/creating-a-web-application-with-python-a-comprehensive-guide-for-beginners-db59df5867e4)  
 [html](https://www.w3schools.com/html/), [css](https://www.w3schools.com/css/) and [javascript](https://www.w3schools.com/js/) resources - w3schools  
-[python spaCy tutorial - AskPython](https://www.askpython.com/python/examples/chatbot-in-python-using-spacy)
+[python spaCy tutorial - AskPython](https://www.askpython.com/python/examples/chatbot-in-python-using-spacy)  
 [jQuery ajax requests](https://api.jquery.com/jQuery.ajax/) resource
