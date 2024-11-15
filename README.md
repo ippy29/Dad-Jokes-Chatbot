@@ -11,7 +11,7 @@ this project is a chatbot that can be asked to fetch a dad joke from the [icanha
   - i used Python 3.11.0b4  
   
 ### instructions:  
-1. copy DadJokesChatbot directory onto local machine
+1. copy DadJokesChatbot repo onto local machine
 2. set up a python virtual environment:
   - **on Windows** (in command prompt)
   ```
@@ -22,7 +22,7 @@ this project is a chatbot that can be asked to fetch a dad joke from the [icanha
   ```
 3. install required libraries
   `pip install -r requirements.txt`
-4. python app.py
+4. run the app using `python app.py`
   
 you should now see something similar to  
   ```
