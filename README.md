@@ -16,7 +16,7 @@ this project is a chatbot that can be asked to fetch a dad joke from the [icanha
   - **on Windows** (in command prompt)
   ```
   cd location\of\DadJokesChatbot
-  pip install virtual env
+  pip install virtualenv
   python -m venv .
   .\Scripts\activate
   ```
