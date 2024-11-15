@@ -116,8 +116,7 @@
         headers: { 
         'Accept': 'application/json',
         'Content-Type': 'application/json' 
-        },
-        
+        },        
         url: "/get",
         type: 'POST',
         data: JSON.stringify({ 'data': userInput }),
@@ -127,7 +126,7 @@
           document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
         },
         error: function(error) {
-          var botHtml = '<p class="botOutput"><b>mr. bot:</b> error ' + error + '</p>';
+          var botHtml = '<p class="botOutput"><b>mr. bot:</b> my friend we are having an error: ' + error + '</p>';
           $(".chatbox").append(botHtml);
           document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
         }
