@@ -24,7 +24,7 @@ def get_joke():
         return response
  
 def fetch_joke():
-    response = requests.get("https://icanhazdadjoke.com/", headers={"Accept": "application/json"})
+    response = requests.get("https://icanhazdadjoke.com/", verify=False, headers={"Accept": "application/json"})
     # the accept header gets it to return a json response
     response = response.json().get("joke")
     return response
