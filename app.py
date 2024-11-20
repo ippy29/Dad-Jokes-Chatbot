@@ -26,6 +26,8 @@ def get_joke():
 def fetch_joke():
     response = requests.get("https://icanhazdadjoke.com/", verify=False, headers={"Accept": "application/json"})
     # the accept header gets it to return a json response
+    #* note that verify=False is insecure and can be removed
+    # it was added so that this would work out a dockerfile - could look into installing relevant ca certificates in the dockerfile, but this didn't work for me
     response = response.json().get("joke")
     return response
 
