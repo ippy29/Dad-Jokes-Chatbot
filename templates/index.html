@@ -38,7 +38,7 @@
         align-items: center;
         justify-content: center;
 
-        h1{
+        #title{
           font-family: "Pixelify Sans", 'Courier New', monospace;
           background-color: #7393B3;
           padding: 10px 20px;
@@ -90,7 +90,7 @@
 <body>
   <div class ="vessel">
     <div class = "card">
-      <h1>the chatbot of dad jokes</h1>
+      <h1 id ="title">the chatbot of dad jokes</h1>
       <div class="chatbox">
         <p><b>mr. bot:</b> ask me to tell a joke!</p>
       </div>
@@ -127,7 +127,7 @@
           document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
         },
         error: function(error) {
-          var botHtml = '<p class="botOutput"><b>mr. bot:</b> my friend we are having an error: ' + error + '</p>';
+          var botHtml = '<p class="botOutput"><b>mr. bot:</b> my friend we are having an error: ' + error.responseText + '</p>';
           $(".chatbox").append(botHtml);
           document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
         }
