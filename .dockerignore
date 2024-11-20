@@ -1,0 +1,14 @@
+.git
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+.python-version
+pyvenv.cfg
+__pycache__/
+Scripts/
+.vscode/
+.gitignore
+Dockerfile
