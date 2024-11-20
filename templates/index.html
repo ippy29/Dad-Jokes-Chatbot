@@ -104,11 +104,12 @@
   <script>
     function getResponse() {
       var userInput =  document.getElementById('input').value;
+      userInput = userInput.replace(/</g, "&lt;").replace(/>/g, "&gt;");
       var userHtml = '<p class="userInput"><b>you:</b> ' + userInput + '</p>';
       document.getElementById('input').value = ""; //clears input box
       $(".chatbox").append(userHtml); //appends user input to #chatbox in an html <p> tag
       /** 
-       * * * ajax request
+       * * ajax request
        * sends data as json to app.py
        * appends the response from app.py to #chatbox in an html <p> tag
        */

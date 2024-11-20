@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import requests, spacy
-from spacy.matcher import Matcher
 from spacytextblob.spacytextblob import SpacyTextBlob
 
 app = Flask(__name__)
@@ -18,8 +17,11 @@ def home():
 def get_joke():
     doc = request.get_json()
     doc = doc.get("data")
-    response = chatbot(doc)
-    return response
+    if doc == "":
+        return "are going to keep saying nothing?"
+    else:
+        response = chatbot(doc)
+        return response
  
 def fetch_joke():
     response = requests.get("https://icanhazdadjoke.com/", headers={"Accept": "application/json"})
