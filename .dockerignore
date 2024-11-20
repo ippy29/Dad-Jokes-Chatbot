@@ -5,10 +5,9 @@ __pycache__
 *.pyd
 .Python
 env
-.python-version
-pyvenv.cfg
-__pycache__/
-Scripts/
 .vscode/
 .gitignore
-Dockerfile
+.python-version
+pyvenv.cfg
+site-packages/
+Scripts/
