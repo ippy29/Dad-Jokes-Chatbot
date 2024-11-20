@@ -1,6 +1,5 @@
 .python-version
 pyvenv.cfg
-backups/
 __pycache__/
 log.txt
 site-packages/
