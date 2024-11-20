@@ -1,7 +1,6 @@
 .python-version
 pyvenv.cfg
 __pycache__/
-log.txt
 site-packages/
 Scripts/
 .vscode/
