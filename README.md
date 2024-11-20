@@ -55,7 +55,7 @@ run `deactivate` in the terminal to leave virtual environment
 4. go to [localhost:5000](http://127.0.0.1:5000) in your browser and you should see the chatbot interface. run `docker stop dad-jokes-chatbot` to stop the container
 
 ### notes
-to make this run in a docker container on my machine, app.py had `verify=False` added to the request to [icanhazdadjoke.com](https://icanhazdadjoke.com/). this is insecure and not needed when running the chatbot **without docker**, so should be removed. if you are using docker and would like it to be more secure, remove it and uncomment the appropriate lines in the Dockerfile
+to make this run in a docker container on my machine, app.py had `verify=False` added to the request to [icanhazdadjoke.com](https://icanhazdadjoke.com/). this is insecure and not needed when running the chatbot **without docker**, so should be removed. if you are using docker and would like it to be more secure, remove it and uncomment the appropriate lines in the Dockerfile to add necessary ca certificates
 
 ---
 
