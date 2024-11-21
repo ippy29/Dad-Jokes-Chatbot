@@ -18,7 +18,7 @@ def get_joke():
     doc = request.get_json()
     doc = doc.get("data")
     if doc == "":
-        return "are going to keep saying nothing?"
+        return "are you going to keep saying nothing?"
     else:
         response = chatbot(doc)
         return response
