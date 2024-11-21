@@ -5,8 +5,11 @@ from spacytextblob.spacytextblob import SpacyTextBlob
 app = Flask(__name__)
 
 # load english language model
-nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_sm") 
+# there are a few different versions of this model-> sm is small, therefore faster + less accurate
+# can use en_core_web_md and en_core_web_lg too
 
+# pipeline to use for sentiment analysis
 nlp.add_pipe("spacytextblob")
 
 @app.route("/")
@@ -20,9 +23,9 @@ def get_joke():
     if doc == "":
         return "are you going to keep saying nothing?"
     else:
-        response = chatbot(doc)
+        response = check_sentiment(doc)
         return response
- 
+
 def fetch_joke():
     response = requests.get("https://icanhazdadjoke.com/", verify=False, headers={"Accept": "application/json"})
     # the accept header gets it to return a json response
@@ -31,7 +34,7 @@ def fetch_joke():
     response = response.json().get("joke")
     return response
 
-def chatbot(doc):
+def check_sentiment(doc):
     doc = nlp(doc)
     sentiment = doc._.blob.polarity
     sentiment = round(sentiment, 2)
