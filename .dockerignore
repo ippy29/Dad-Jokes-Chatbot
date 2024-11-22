@@ -10,7 +10,7 @@ env
 .gitignore
 .python-version
 pyvenv.cfg
-# Lib/
+Lib/
 Scripts/
 README.md
 dad.image.tar
