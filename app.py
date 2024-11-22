@@ -5,7 +5,7 @@ from spacytextblob.spacytextblob import SpacyTextBlob
 app = Flask(__name__)
 
 # load english language model
-nlp = spacy.load("en_core_web_sm") 
+nlp = spacy.load("en_core_web_md") 
 # there are a few different versions of this model-> sm is small, therefore faster + less accurate
 # can use en_core_web_md and en_core_web_lg too
 
@@ -30,7 +30,7 @@ def fetch_joke():
     response = requests.get("https://icanhazdadjoke.com/", verify=False, headers={"Accept": "application/json"})
     # the accept header gets it to return a json response
     #* note that verify=False is insecure and can be removed
-    # it was added so that this would work out a dockerfile - could look into installing relevant ca certificates in the dockerfile, but this didn't work for me
+    # it was added so that this would work in a docker container - could look into installing relevant ca certificates in the dockerfile, but this didn't work for me
     response = response.json().get("joke")
     return response
 
