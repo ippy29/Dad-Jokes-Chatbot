@@ -1,7 +1,5 @@
 FROM python:3.11-slim-buster
 
-# ENV FLASK_APP=main.py
-
 WORKDIR /app
 
 COPY . .
@@ -17,4 +15,7 @@ RUN pip install --trusted-host pypi.python.org --trusted-host pypi.org --trusted
 # COPY "ssl/*.crt" "/usr/local/share/ca-certificates/"
 # RUN update-ca-certificates
 
-CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
+EXPOSE 5000
+CMD [ "python", "app.py"]
+
+#CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
