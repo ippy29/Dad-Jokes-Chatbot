@@ -1,13 +1,10 @@
 pipeline {
   agent {
-    label 'Build02'
+    label 'master'
     }
   stages {
     stage('Build Docker Image') {
       steps {
-        // script {
-        //   docker.build("dad-jokes-chatbot", "-f Dockerfile .")
-        // }
         sh 'docker build -t dad-jokes-chatbot .'
       }
     }
@@ -18,12 +15,4 @@ pipeline {
       }
     }
   }
-  // cleanup
-  // post {
-  //   always {
-  //     script{
-  //       sh 'docker rm $(docker stop $(docker ps -q --filter "ancestor=dad-jokes-chatbot"))' // stops then removes container
-  //     }
-  //   }
-  // }
 }
