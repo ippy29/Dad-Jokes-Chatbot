@@ -55,14 +55,5 @@ run `deactivate` in the terminal to leave virtual environment
 4. go to [localhost:5000](http://127.0.0.1:5000) in your browser and you should see the chatbot interface. run `docker stop dad-jokes-chatbot` to stop the container
 
 ### notes
-to make this run in a docker container on my machine, app.py had `verify=False` added to the request to [icanhazdadjoke.com](https://icanhazdadjoke.com/). this is insecure and not needed when running the chatbot **without docker**, so should be removed. if you are using docker and would like it to be more secure, remove it and uncomment the appropriate lines in the Dockerfile to add necessary ca certificates
-
----
-
-## relevant links  
-[intro to python virtual environments - freeCodeCamp](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)  
-[beginners guide to creating a web application with flask - Medium](https://medium.com/@dattu1993/creating-a-web-application-with-python-a-comprehensive-guide-for-beginners-db59df5867e4)  
-[html](https://www.w3schools.com/html/), [css](https://www.w3schools.com/css/) and [javascript](https://www.w3schools.com/js/) resources - w3schools  
-[python spaCy tutorial - AskPython](https://www.askpython.com/python/examples/chatbot-in-python-using-spacy)  
-[jQuery ajax requests](https://api.jquery.com/jQuery.ajax/) documentation  
-[dockerize a flask app](https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/) - freeCodeCamp
+to make this run in a docker container on my machine, app.py had `verify=False` added to the request to [icanhazdadjoke.com](https://icanhazdadjoke.com/). this is insecure and not needed when running the chatbot **without docker**, so should be removed.  
+[How To Serve Flask Applications with Gunicorn and Nginx on Ubuntu 22.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-22-04) <- a good tutorial is you want this up online
